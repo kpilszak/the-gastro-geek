@@ -10,10 +10,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RecipeRequestDTO {
+public class RecipeResponseDTO {
 
+    private Long id;
     private String title;
     private String description;
     private int calories;
-
+    
 }
