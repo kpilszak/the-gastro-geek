@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.recipes.service.impl;
 
-import com.kpilszak.thegastrogeekbackend.recipes.dto.RecipeResponseDTO;
+import com.kpilszak.thegastrogeekbackend.recipes.domain.Recipe;
 import com.kpilszak.thegastrogeekbackend.recipes.repository.RecipeRepository;
 import com.kpilszak.thegastrogeekbackend.recipes.service.RecipeService;
 import org.springframework.data.domain.Page;
@@ -19,8 +19,8 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
-    public Page<RecipeResponseDTO> getAllRecipes(Pageable pageable) {
-        return null;
+    public Page<Recipe> getAllRecipes(Pageable pageable) {
+        return recipeRepository.findAll(pageable);
     }
 
 }
