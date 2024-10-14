@@ -13,7 +13,7 @@ public class RecipeServiceImpl implements RecipeService {
     private final RecipeRepository recipeRepository;
 
     public RecipeServiceImpl(
-            RecipeRepository recipeRepository
+            final RecipeRepository recipeRepository
     ) {
         this.recipeRepository = recipeRepository;
     }
