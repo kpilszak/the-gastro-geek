@@ -7,9 +7,7 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface RecipeMapper {
-
     Recipe toDomain(RecipeRequestDTO dto);
 
     RecipeResponseDTO toDTO(Recipe recipe);
-
 }

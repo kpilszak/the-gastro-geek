@@ -11,10 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RecipeResponseDTO {
-
     private Long id;
     private String title;
     private String description;
     private int calories;
-    
 }

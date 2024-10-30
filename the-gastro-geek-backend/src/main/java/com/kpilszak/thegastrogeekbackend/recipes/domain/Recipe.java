@@ -15,12 +15,10 @@ import lombok.*;
 @ToString(exclude = {"description", "calories"})
 @EqualsAndHashCode(of = {"id"})
 public class Recipe {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String description;
     private int calories;
-
 }
