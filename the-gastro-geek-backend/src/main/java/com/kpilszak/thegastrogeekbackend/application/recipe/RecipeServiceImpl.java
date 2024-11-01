@@ -1,8 +1,7 @@
-package com.kpilszak.thegastrogeekbackend.application.recipe.impl;
+package com.kpilszak.thegastrogeekbackend.application.recipe;
 
 import com.kpilszak.thegastrogeekbackend.recipes.domain.Recipe;
 import com.kpilszak.thegastrogeekbackend.recipes.repository.RecipeRepository;
-import com.kpilszak.thegastrogeekbackend.application.recipe.RecipeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
