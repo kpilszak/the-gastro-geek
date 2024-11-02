@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.application.recipe;
 
-import com.kpilszak.thegastrogeekbackend.recipes.domain.Recipe;
+import com.kpilszak.thegastrogeekbackend.domain.recipe.model.Recipe;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

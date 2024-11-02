@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.mapper;
 
-import com.kpilszak.thegastrogeekbackend.recipes.domain.Recipe;
+import com.kpilszak.thegastrogeekbackend.domain.recipe.model.Recipe;
 import com.kpilszak.thegastrogeekbackend.recipes.dto.RecipeRequestDTO;
 import com.kpilszak.thegastrogeekbackend.recipes.dto.RecipeResponseDTO;
 import org.mapstruct.Mapper;

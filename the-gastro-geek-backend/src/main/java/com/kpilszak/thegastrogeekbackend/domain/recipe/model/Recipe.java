@@ -1,4 +1,4 @@
-package com.kpilszak.thegastrogeekbackend.recipes.domain;
+package com.kpilszak.thegastrogeekbackend.domain.recipe.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

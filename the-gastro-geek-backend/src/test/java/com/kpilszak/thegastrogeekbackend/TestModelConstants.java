@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend;
 
-import com.kpilszak.thegastrogeekbackend.recipes.domain.Recipe;
+import com.kpilszak.thegastrogeekbackend.domain.recipe.model.Recipe;
 import org.instancio.Instancio;
 import org.instancio.Model;
 
