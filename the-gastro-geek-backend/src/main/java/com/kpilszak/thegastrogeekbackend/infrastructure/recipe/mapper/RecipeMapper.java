@@ -1,13 +1,13 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.mapper;
 
-import com.kpilszak.thegastrogeekbackend.domain.recipe.model.Recipe;
+import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.entity.RecipeEntity;
 import com.kpilszak.thegastrogeekbackend.recipes.dto.RecipeRequestDTO;
 import com.kpilszak.thegastrogeekbackend.recipes.dto.RecipeResponseDTO;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface RecipeMapper {
-    Recipe toDomain(RecipeRequestDTO dto);
+    RecipeEntity toDomain(RecipeRequestDTO dto);
 
-    RecipeResponseDTO toDTO(Recipe recipe);
+    RecipeResponseDTO toDTO(RecipeEntity recipeEntity);
 }

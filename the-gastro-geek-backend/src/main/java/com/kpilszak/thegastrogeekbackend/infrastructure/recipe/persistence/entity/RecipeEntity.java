@@ -1,4 +1,4 @@
-package com.kpilszak.thegastrogeekbackend.domain.recipe.model;
+package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +14,7 @@ import lombok.*;
 @Builder
 @ToString(exclude = {"description", "calories"})
 @EqualsAndHashCode(of = {"id"})
-public class Recipe {
+public class RecipeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
