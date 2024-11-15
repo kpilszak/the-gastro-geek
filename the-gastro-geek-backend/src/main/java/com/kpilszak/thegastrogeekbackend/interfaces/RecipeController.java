@@ -1,4 +1,4 @@
-package com.kpilszak.thegastrogeekbackend.recipes.web;
+package com.kpilszak.thegastrogeekbackend.interfaces;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
