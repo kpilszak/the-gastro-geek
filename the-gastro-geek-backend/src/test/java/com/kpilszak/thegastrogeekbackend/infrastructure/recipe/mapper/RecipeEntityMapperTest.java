@@ -1,6 +1,5 @@
-package com.kpilszak.thegastrogeekbackend.mapper;
+package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.mapper;
 
-import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.mapper.RecipeMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
