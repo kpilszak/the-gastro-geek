@@ -7,11 +7,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class RecipeRequestDTO {
     private String title;
     private String description;
     private int calories;
 }
+
