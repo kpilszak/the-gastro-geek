@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.application.recipe;
 
-import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.entity.RecipeEntity;
+import com.kpilszak.thegastrogeekbackend.domain.recipe.model.Recipe;
 import com.kpilszak.thegastrogeekbackend.domain.recipe.repository.RecipeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -13,7 +13,7 @@ public class RecipeServiceImpl implements RecipeService {
     private final RecipeRepository recipeRepository;
 
     @Override
-    public Page<RecipeEntity> getAllRecipes(Pageable pageable) {
+    public Page<Recipe> getAllRecipes(Pageable pageable) {
         return recipeRepository.findAll(pageable);
     }
 }
