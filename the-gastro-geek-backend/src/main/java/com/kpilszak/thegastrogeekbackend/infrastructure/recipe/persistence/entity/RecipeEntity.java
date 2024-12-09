@@ -7,8 +7,8 @@ import lombok.*;
 @Table(name = "recipes")
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 @ToString(exclude = {"description", "calories"})
 @EqualsAndHashCode(of = {"id"})
