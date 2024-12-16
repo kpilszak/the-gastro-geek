@@ -5,6 +5,7 @@ import com.kpilszak.thegastrogeekbackend.application.recipe.dto.RecipeResponseDT
 import com.kpilszak.thegastrogeekbackend.domain.recipe.model.Recipe;
 import org.mapstruct.Mapper;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 
 import java.util.List;
 
@@ -18,6 +19,6 @@ public interface RecipeMapper {
         List<RecipeResponseDTO> dtoList = page.getContent().stream()
                 .map(this::toDTO)
                 .toList();
-        return null;
+        return new PageImpl<>(dtoList, page.getPageable(), page.getTotalElements());
     }
 }
