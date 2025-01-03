@@ -1,5 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.config;
 
+import com.kpilszak.thegastrogeekbackend.infrastructure.interceptor.ApiPrefixInterceptor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -21,6 +22,6 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-
+        registry.addInterceptor(new ApiPrefixInterceptor(apiPrefix + "/" + apiVersion));
     }
 }
