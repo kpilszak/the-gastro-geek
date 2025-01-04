@@ -22,6 +22,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new ApiPrefixInterceptor(apiPrefix + "/" + apiVersion));
+        registry.addInterceptor(new ApiPrefixInterceptor(apiPrefix + "/" + apiVersion))
+                .addPathPatterns("/**");
     }
 }
