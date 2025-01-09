@@ -13,6 +13,13 @@ public class ApiPrefixInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        String requestURI = request.getRequestURI();
+
+        if (!requestURI.startsWith(apiPrefix)) {
+            response.sendRedirect(apiPrefix + requestURI);
+            return false;
+        }
+
         return true;
     }
 }
