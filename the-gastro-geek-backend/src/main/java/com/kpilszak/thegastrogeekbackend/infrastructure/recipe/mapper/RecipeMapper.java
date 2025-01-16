@@ -2,7 +2,7 @@ package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.mapper;
 
 import com.kpilszak.thegastrogeekbackend.application.recipe.dto.RecipeRequestDTO;
 import com.kpilszak.thegastrogeekbackend.application.recipe.dto.RecipeResponseDTO;
-import com.kpilszak.thegastrogeekbackend.domain.recipe.model.Recipe;
+import com.kpilszak.thegastrogeekbackend.domain.model.Recipe;
 import org.mapstruct.Mapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
