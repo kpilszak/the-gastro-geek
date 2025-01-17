@@ -1,4 +1,4 @@
-package com.kpilszak.thegastrogeekbackend.domain.recipe.repository;
+package com.kpilszak.thegastrogeekbackend.domain.repository;
 
 import com.kpilszak.thegastrogeekbackend.domain.model.Recipe;
 import org.springframework.data.domain.Page;
