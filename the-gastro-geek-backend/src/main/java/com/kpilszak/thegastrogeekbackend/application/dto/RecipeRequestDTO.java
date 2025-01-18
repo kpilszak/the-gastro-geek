@@ -1,4 +1,4 @@
-package com.kpilszak.thegastrogeekbackend.application.recipe.dto;
+package com.kpilszak.thegastrogeekbackend.application.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -10,9 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class RecipeResponseDTO {
-    private Long id;
+public class RecipeRequestDTO {
     private String title;
     private String description;
     private int calories;
 }
+
