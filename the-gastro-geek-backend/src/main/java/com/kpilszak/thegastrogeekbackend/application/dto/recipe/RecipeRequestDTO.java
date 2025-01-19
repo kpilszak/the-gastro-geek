@@ -1,4 +1,4 @@
-package com.kpilszak.thegastrogeekbackend.application.dto;
+package com.kpilszak.thegastrogeekbackend.application.dto.recipe;
 
 
 import lombok.AllArgsConstructor;
