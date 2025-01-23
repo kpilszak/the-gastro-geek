@@ -1,7 +1,7 @@
 package com.kpilszak.thegastrogeekbackend.interfaces;
 
 import com.kpilszak.thegastrogeekbackend.application.RecipeService;
-import com.kpilszak.thegastrogeekbackend.application.dto.RecipeResponseDTO;
+import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeResponseDTO;
 import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.mapper.RecipeMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
