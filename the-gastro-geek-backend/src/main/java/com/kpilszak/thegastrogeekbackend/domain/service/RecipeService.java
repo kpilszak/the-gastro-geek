@@ -7,10 +7,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RecipeServiceImpl {
+public class RecipeService {
     private final RecipeRepository recipeRepository;
 
-    public RecipeServiceImpl(RecipeRepository recipeRepository) {
+    public RecipeService(RecipeRepository recipeRepository) {
         this.recipeRepository = recipeRepository;
     }
 
