@@ -1,7 +1,10 @@
 package com.kpilszak.thegastrogeekbackend.application;
 
+import com.kpilszak.thegastrogeekbackend.domain.model.Recipe;
 import com.kpilszak.thegastrogeekbackend.domain.service.RecipeService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -9,5 +12,7 @@ import org.springframework.stereotype.Service;
 public class RecipeManagement {
     private final RecipeService service;
 
-//    Page<Recipe> getAllRecipes(Pageable pageable);
+    Page<Recipe> getAllRecipes(Pageable pageable) {
+        return service.getAllRecipes(pageable);
+    }
 }
