@@ -10,7 +10,7 @@ import org.springframework.data.domain.PageImpl;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
+@Mapper
 public interface RecipeMapper {
     Recipe fromDTO(RecipeRequestDTO dto);
 
