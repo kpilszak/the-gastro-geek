@@ -8,8 +8,6 @@ import org.mapstruct.Mapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 
-import java.util.List;
-
 @Mapper
 public interface RecipeMapper {
     Recipe fromDTO(RecipeRequestDTO dto);
@@ -24,4 +22,11 @@ public interface RecipeMapper {
     }
 
     Recipe fromEntity(RecipeEntity entity);
+
+    default Page<Recipe> fromEntities(Page<RecipeEntity> entityPage) {
+        var domainList = entityPage.getContent().stream()
+                .map(this::fromEntity)
+                .toList();
+        return new PageImpl<>(domainList, entityPage.getPageable(), entityPage.getTotalElements());
+    }
 }
