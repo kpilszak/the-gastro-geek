@@ -17,6 +17,6 @@ public class RecipeRepositoryAdapter implements RecipeRepository {
 
     @Override
     public Page<Recipe> findAll(Pageable pageable) {
-        return null;
+        return mapper.fromEntities(repository.findAll(pageable));
     }
 }
