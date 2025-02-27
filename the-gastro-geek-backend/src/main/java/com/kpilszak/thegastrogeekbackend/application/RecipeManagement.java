@@ -13,6 +13,6 @@ public class RecipeManagement {
     private final RecipeService service;
 
     public Page<Recipe> getAllRecipes(Pageable pageable) {
-        return service.getAllRecipes(pageable);
+        return service.getAll(pageable);
     }
 }
