@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/recipes")
 public class RecipeController {
-    private final RecipeManagement recipeManagement;
+    private final RecipeManagement management;
     private final RecipeMapper recipeMapper;
 
     @GetMapping
     public Page<RecipeResponseDTO> getAll(Pageable pageable) {
-        return recipeMapper.toDTOPage(recipeManagement.getAll(pageable));
+        return recipeMapper.toDTOPage(management.getAll(pageable));
     }
 }
