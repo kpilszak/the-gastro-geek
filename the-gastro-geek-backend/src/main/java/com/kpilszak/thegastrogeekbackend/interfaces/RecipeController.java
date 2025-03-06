@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/recipes")
 public class RecipeController {
     private final RecipeManagement management;
-    private final RecipeMapper recipeMapper;
+    private final RecipeMapper mapper;
 
     @GetMapping
     public Page<RecipeResponseDTO> getAll(Pageable pageable) {
-        return recipeMapper.toDTOPage(management.getAll(pageable));
+        return mapper.toDTOPage(management.getAll(pageable));
     }
 }
