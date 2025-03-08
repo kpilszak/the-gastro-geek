@@ -6,7 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class RecipeMapperTest {
-
     @Autowired
     private RecipeMapper recipeMapper;
 
@@ -15,5 +14,4 @@ class RecipeMapperTest {
 
     @Test
     void toDTO_shouldMapDomainToResponseDTO_whenGivenValidDomain() {}
-
 }
