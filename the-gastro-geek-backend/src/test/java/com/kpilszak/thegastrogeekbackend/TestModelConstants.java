@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend;
 
-import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.entity.RecipeEntity;
+import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.entity.recipe.RecipeEntity;
 import org.instancio.Instancio;
 import org.instancio.Model;
 
