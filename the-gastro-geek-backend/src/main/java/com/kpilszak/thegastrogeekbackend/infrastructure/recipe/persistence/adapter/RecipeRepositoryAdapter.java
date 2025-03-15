@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.adapter;
 
-import com.kpilszak.thegastrogeekbackend.domain.model.Recipe;
+import com.kpilszak.thegastrogeekbackend.infrastructure.Recipe;
 import com.kpilszak.thegastrogeekbackend.domain.repository.RecipeRepository;
 import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.mapper.RecipeMapper;
 import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.repository.RecipeJpaRepository;
