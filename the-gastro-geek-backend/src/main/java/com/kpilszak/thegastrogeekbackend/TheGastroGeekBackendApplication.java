@@ -8,5 +8,4 @@ public class TheGastroGeekBackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(TheGastroGeekBackendApplication.class, args);
     }
-
 }
