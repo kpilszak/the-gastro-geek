@@ -1,4 +1,4 @@
-package com.kpilszak.thegastrogeekbackend.infrastructure;
+package com.kpilszak.thegastrogeekbackend.domain.model.recipe;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
