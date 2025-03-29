@@ -1,4 +1,4 @@
-package com.kpilszak.thegastrogeekbackend.domain.common;
+package com.kpilszak.thegastrogeekbackend.domain.model;
 
 import java.time.Instant;
 

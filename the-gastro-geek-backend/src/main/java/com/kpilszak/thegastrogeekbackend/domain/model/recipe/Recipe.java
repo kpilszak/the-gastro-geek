@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.domain.model.recipe;
 
-import com.kpilszak.thegastrogeekbackend.domain.common.AbstractDomain;
+import com.kpilszak.thegastrogeekbackend.domain.model.AbstractDomain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
