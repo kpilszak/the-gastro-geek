@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class RecipeRequestDTO {
+public class RecipeBaseRequestDTO {
     private String title;
     private String description;
     private int calories;
