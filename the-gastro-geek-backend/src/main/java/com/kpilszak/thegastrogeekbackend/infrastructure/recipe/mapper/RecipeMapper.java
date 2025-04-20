@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.mapper;
 
-import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeBaseRequestDTO;
+import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeRequestDTO;
 import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeResponseDTO;
 import com.kpilszak.thegastrogeekbackend.domain.model.recipe.Recipe;
 import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.entity.recipe.RecipeEntity;
@@ -10,7 +10,7 @@ import org.springframework.data.domain.PageImpl;
 
 @Mapper
 public interface RecipeMapper {
-    Recipe fromDTO(RecipeBaseRequestDTO dto);
+    Recipe fromDTO(RecipeRequestDTO dto);
 
     RecipeResponseDTO toDTO(Recipe domain);
 
