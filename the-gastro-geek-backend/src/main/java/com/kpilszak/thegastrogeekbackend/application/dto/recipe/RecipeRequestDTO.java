@@ -1,16 +1,16 @@
 package com.kpilszak.thegastrogeekbackend.application.dto.recipe;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class RecipeRequestDTO {
+@SuperBuilder
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
+public class RecipeRequestDTO extends RecipeBaseRequestDTO {
     private String id;
 }
 
