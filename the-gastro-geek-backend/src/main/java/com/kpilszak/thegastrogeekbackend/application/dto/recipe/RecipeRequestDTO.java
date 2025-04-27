@@ -11,6 +11,6 @@ import lombok.experimental.SuperBuilder;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class RecipeRequestDTO extends RecipeBaseRequestDTO {
-    private String id;
+    private Long id;
 }
 
