@@ -33,6 +33,7 @@
 		<lombok.mapstruct.binding.version>0.2.0</lombok.mapstruct.binding.version>
 		<instancio.version>5.0.2</instancio.version>
 		<maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+		<spring.boot.maven.plugin.version>3.0.4</spring.boot.maven.plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -90,6 +91,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven.compiler.plugin.version}</version>
 				<configuration>
+					<release>${java.version}</release>
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.mapstruct</groupId>
@@ -117,6 +119,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring.boot.maven.plugin.version}</version>
 				<configuration>
 					<excludes>
 						<exclude>
