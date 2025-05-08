@@ -11,7 +11,7 @@ import java.time.Instant;
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-public abstract class AbstractDTO {
+public abstract class AbstractResponseDTO {
     private String createdBy;
     private String updatedBy;
     private Instant createdDate;
