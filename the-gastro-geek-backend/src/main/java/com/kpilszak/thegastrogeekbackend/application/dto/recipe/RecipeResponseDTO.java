@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class RecipeResponseDTO {
+public class RecipeResponseDTO extends AbstractResponseDTO {
     private Long id;
     private String title;
     private String description;
