@@ -22,10 +22,10 @@ class RecipeMapperTest {
 
         var domain = mapper.fromDTO(dto);
 
-        assertFromDTORecipe(domain, dto);
+        assertRecipeFromDTO(domain, dto);
     }
 
-    private static void assertFromDTORecipe(Recipe domain, RecipeRequestDTO dto) {
+    private static void assertRecipeFromDTO(Recipe domain, RecipeRequestDTO dto) {
         assertThat(domain.getId(), is(dto.getId()));
         assertThat(domain.getTitle(), is(dto.getTitle()));
         assertThat(domain.getDescription(), is(dto.getDescription()));
