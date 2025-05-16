@@ -2,7 +2,7 @@ package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.adap
 
 import com.kpilszak.thegastrogeekbackend.domain.model.recipe.Recipe;
 import com.kpilszak.thegastrogeekbackend.domain.repository.RecipeRepository;
-import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.mapper.RecipeMapper;
+import com.kpilszak.thegastrogeekbackend.infrastructure.mapper.RecipeMapper;
 import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.repository.RecipeJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

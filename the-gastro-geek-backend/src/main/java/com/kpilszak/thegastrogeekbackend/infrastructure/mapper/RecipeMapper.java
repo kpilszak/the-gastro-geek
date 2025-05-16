@@ -1,4 +1,4 @@
-package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.mapper;
+package com.kpilszak.thegastrogeekbackend.infrastructure.mapper;
 
 import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeRequestDTO;
 import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeResponseDTO;
