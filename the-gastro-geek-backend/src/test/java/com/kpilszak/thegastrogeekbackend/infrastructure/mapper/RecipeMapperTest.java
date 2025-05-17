@@ -1,9 +1,8 @@
-package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.mapper;
+package com.kpilszak.thegastrogeekbackend.infrastructure.mapper;
 
 import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeRequestDTO;
 import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeResponseDTO;
 import com.kpilszak.thegastrogeekbackend.domain.model.recipe.Recipe;
-import com.kpilszak.thegastrogeekbackend.infrastructure.mapper.RecipeMapper;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
