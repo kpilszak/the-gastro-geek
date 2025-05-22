@@ -13,8 +13,8 @@ import java.time.Instant;
 @NoArgsConstructor
 public abstract class AbstractResponseDTO {
     private String createdBy;
-    private String updatedBy;
     private Instant createdDate;
+    private String updatedBy;
     private Instant updatedDate;
     private Long version;
 }
