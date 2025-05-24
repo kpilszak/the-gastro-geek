@@ -14,7 +14,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 @SpringBootTest
-class RecipeMapperTest {
+class RecipeMapperTest extends AbstractMapperTest {
     @Autowired
     private RecipeMapper mapper;
 
