@@ -7,7 +7,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 public class AbstractMapperTest {
-    protected void assertAuditToDTO(AbstractResponseDTO dto, AbstractDomain domain) {
+    protected static void assertAuditToDTO(AbstractResponseDTO dto, AbstractDomain domain) {
         assertThat(dto.getCreatedBy(), is(domain.getCreatedBy()));
         assertThat(dto.getUpdatedBy(), is(domain.getUpdatedBy()));
         assertThat(dto.getCreatedDate(), is(domain.getCreatedDate()));

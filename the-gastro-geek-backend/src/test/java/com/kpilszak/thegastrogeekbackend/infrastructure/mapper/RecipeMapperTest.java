@@ -48,5 +48,6 @@ class RecipeMapperTest extends AbstractMapperTest {
         assertThat(dto.getTitle(), is(domain.getTitle()));
         assertThat(dto.getDescription(), is(domain.getDescription()));
         assertThat(dto.getCalories(), is(domain.getCalories()));
+        assertAuditToDTO(dto, domain);
     }
 }
