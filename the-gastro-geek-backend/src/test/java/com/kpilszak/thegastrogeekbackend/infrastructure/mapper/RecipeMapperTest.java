@@ -11,7 +11,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
 import static com.kpilszak.thegastrogeekbackend.constants.model.TestRecipeConstants.RECIPE_MODEL;
-import static com.kpilszak.thegastrogeekbackend.constants.model.TestRecipeConstants.RECIPE_REQUEST_DTO;
+import static com.kpilszak.thegastrogeekbackend.constants.model.TestRecipeConstants.RECIPE_REQUEST_DTO_MODEL;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
@@ -22,7 +22,7 @@ class RecipeMapperTest extends AbstractMapperTest {
 
     @Test
     void fromDTO_shouldMapToDomain_whenDTOUsed() {
-        var dto = Instancio.create(RECIPE_REQUEST_DTO);
+        var dto = Instancio.create(RECIPE_REQUEST_DTO_MODEL);
 
         var domain = mapper.fromDTO(dto);
 
