@@ -7,6 +7,8 @@ import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
 
 import static com.kpilszak.thegastrogeekbackend.constants.model.TestRecipeConstants.RECIPE_MODEL;
 import static com.kpilszak.thegastrogeekbackend.constants.model.TestRecipeConstants.RECIPE_REQUEST_DTO;
@@ -34,6 +36,18 @@ class RecipeMapperTest extends AbstractMapperTest {
         var dto = mapper.toDTO(domain);
 
         assertRecipeToDTO(dto, domain);
+    }
+
+    @Test
+    void toDTO_shouldMapToDTO_whenPageUsed() {
+        var list = Instancio.ofList(RECIPE_MODEL).size(1).create();
+        var pageable = PageRequest.of(0, 2);
+        var page = new PageImpl<>(list, pageable, list.size());
+
+        var dto = mapper.toDTO(page);
+
+        assertRecipeToDTO(dto.getContent().get(0), page.getContent().get(0));
+        assertPageMetadataToDTO(dto, page);
     }
 
     private static void assertRecipeFromDTO(Recipe domain, RecipeRequestDTO dto) {
