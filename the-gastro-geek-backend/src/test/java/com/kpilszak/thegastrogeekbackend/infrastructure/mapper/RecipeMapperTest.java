@@ -3,6 +3,7 @@ package com.kpilszak.thegastrogeekbackend.infrastructure.mapper;
 import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeRequestDTO;
 import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeResponseDTO;
 import com.kpilszak.thegastrogeekbackend.domain.model.recipe.Recipe;
+import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.entity.recipe.RecipeEntity;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
-import static com.kpilszak.thegastrogeekbackend.constants.model.TestRecipeConstants.RECIPE_MODEL;
-import static com.kpilszak.thegastrogeekbackend.constants.model.TestRecipeConstants.RECIPE_REQUEST_DTO_MODEL;
+import static com.kpilszak.thegastrogeekbackend.constants.model.TestRecipeConstants.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
@@ -50,6 +50,15 @@ class RecipeMapperTest extends AbstractMapperTest {
         assertPageMetadataToDTO(dto, page);
     }
 
+    @Test
+    void fromEntity_shouldMapToDomain_whenEntityUsed() {
+        var entity = Instancio.create(RECIPE_ENTITY_MODEL);
+
+        var domain = mapper.fromEntity(entity);
+
+        assertRecipeFromEntity(domain, entity);
+    }
+
     private static void assertRecipeFromDTO(Recipe domain, RecipeRequestDTO dto) {
         assertThat(domain.getId(), is(dto.getId()));
         assertThat(domain.getTitle(), is(dto.getTitle()));
@@ -63,5 +72,12 @@ class RecipeMapperTest extends AbstractMapperTest {
         assertThat(dto.getDescription(), is(domain.getDescription()));
         assertThat(dto.getCalories(), is(domain.getCalories()));
         assertAuditToDTO(dto, domain);
+    }
+
+    private static void assertRecipeFromEntity(Recipe domain, RecipeEntity entity) {
+        assertThat(domain.getId(), is(entity.getId()));
+        assertThat(domain.getTitle(), is(entity.getTitle()));
+        assertThat(domain.getDescription(), is(entity.getDescription()));
+        assertThat(domain.getCalories(), is(entity.getCalories()));
     }
 }
