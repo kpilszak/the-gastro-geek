@@ -1,6 +1,7 @@
 package com.kpilszak.thegastrogeekbackend.application.dto.recipe;
 
 
+import com.kpilszak.thegastrogeekbackend.application.dto.AbstractResponseDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

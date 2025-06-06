@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.mapper;
 
-import com.kpilszak.thegastrogeekbackend.application.dto.recipe.AbstractResponseDTO;
+import com.kpilszak.thegastrogeekbackend.application.dto.AbstractResponseDTO;
 import com.kpilszak.thegastrogeekbackend.domain.model.AbstractDomain;
 import org.springframework.data.domain.Page;
 
