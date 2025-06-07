@@ -19,6 +19,6 @@ public class RecipeController {
 
     @GetMapping
     public Page<RecipeResponseDTO> getAll(Pageable pageable) {
-        return mapper.toDTO(management.getAll(pageable));
+        return mapper.toDTOs(management.getAll(pageable));
     }
 }

@@ -14,7 +14,7 @@ public interface RecipeMapper {
 
     RecipeResponseDTO toDTO(Recipe domain);
 
-    default Page<RecipeResponseDTO> toDTO(Page<Recipe> page) {
+    default Page<RecipeResponseDTO> toDTOs(Page<Recipe> page) {
         var dtoList = page.getContent().stream()
                 .map(this::toDTO)
                 .toList();
