@@ -2,6 +2,7 @@ package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.enti
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Entity
 @Table(name = "recipes")
@@ -9,13 +10,11 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@ToString(exclude = {"description", "calories"})
-@EqualsAndHashCode(of = {"id"})
-public class RecipeEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@SuperBuilder
+@ToString(callSuper = true, onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(callSuper = true)
+public class RecipeEntity extends AbstractEntity {
+    @ToString.Include
     private String title;
     private String description;
     private int calories;
