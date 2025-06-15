@@ -1,15 +1,17 @@
 package com.kpilszak.thegastrogeekbackend.domain.model.recipe;
 
 import com.kpilszak.thegastrogeekbackend.domain.model.AbstractDomain;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-@Data
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@SuperBuilder
+@ToString(callSuper = true, onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(callSuper = true)
 public class Recipe extends AbstractDomain {
-    private Long id;
+    @ToString.Include
     private String title;
     private String description;
     private int calories;

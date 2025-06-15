@@ -10,9 +10,9 @@ import static org.hamcrest.Matchers.is;
 public class AbstractMapperTest {
     protected static void assertAuditToDTO(AbstractResponseDTO dto, AbstractDomain domain) {
         assertThat(dto.getCreatedBy(), is(domain.getCreatedBy()));
-        assertThat(dto.getUpdatedBy(), is(domain.getUpdatedBy()));
+        assertThat(dto.getUpdatedBy(), is(domain.getLastUpdatedBy()));
         assertThat(dto.getCreatedDate(), is(domain.getCreatedDate()));
-        assertThat(dto.getUpdatedDate(), is(domain.getUpdatedDate()));
+        assertThat(dto.getUpdatedDate(), is(domain.getLastUpdatedDate()));
         assertThat(dto.getVersion(), is(domain.getVersion()));
     }
 
