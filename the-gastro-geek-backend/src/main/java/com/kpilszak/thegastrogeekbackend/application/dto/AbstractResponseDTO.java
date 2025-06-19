@@ -12,6 +12,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @NoArgsConstructor
 public abstract class AbstractResponseDTO {
+    private Long id;
     private String createdBy;
     private Instant createdDate;
     private String updatedBy;
