@@ -12,7 +12,6 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @SuperBuilder
 public class RecipeResponseDTO extends AbstractResponseDTO {
-    private Long id;
     private String title;
     private String description;
     private int calories;
