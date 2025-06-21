@@ -2,7 +2,7 @@ package com.kpilszak.thegastrogeekbackend.constants.model;
 
 import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeRequestDTO;
 import com.kpilszak.thegastrogeekbackend.domain.model.recipe.Recipe;
-import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.entity.recipe.RecipeEntity;
+import com.kpilszak.thegastrogeekbackend.infrastructure.persistence.entity.recipe.RecipeEntity;
 import org.instancio.Instancio;
 import org.instancio.Model;
 

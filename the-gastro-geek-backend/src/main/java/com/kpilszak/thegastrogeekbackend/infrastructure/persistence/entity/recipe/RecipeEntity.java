@@ -1,4 +1,4 @@
-package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.entity.recipe;
+package com.kpilszak.thegastrogeekbackend.infrastructure.persistence.entity.recipe;
 
 import jakarta.persistence.*;
 import lombok.*;

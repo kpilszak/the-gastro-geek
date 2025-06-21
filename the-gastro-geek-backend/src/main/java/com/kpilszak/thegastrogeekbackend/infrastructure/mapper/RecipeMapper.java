@@ -3,7 +3,7 @@ package com.kpilszak.thegastrogeekbackend.infrastructure.mapper;
 import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeRequestDTO;
 import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeResponseDTO;
 import com.kpilszak.thegastrogeekbackend.domain.model.recipe.Recipe;
-import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.entity.recipe.RecipeEntity;
+import com.kpilszak.thegastrogeekbackend.infrastructure.persistence.entity.recipe.RecipeEntity;
 import org.mapstruct.Mapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

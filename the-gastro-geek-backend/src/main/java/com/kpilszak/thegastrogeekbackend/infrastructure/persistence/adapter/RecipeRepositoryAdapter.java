@@ -1,9 +1,9 @@
-package com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.adapter;
+package com.kpilszak.thegastrogeekbackend.infrastructure.persistence.adapter;
 
 import com.kpilszak.thegastrogeekbackend.domain.model.recipe.Recipe;
 import com.kpilszak.thegastrogeekbackend.domain.repository.RecipeRepository;
 import com.kpilszak.thegastrogeekbackend.infrastructure.mapper.RecipeMapper;
-import com.kpilszak.thegastrogeekbackend.infrastructure.recipe.persistence.repository.RecipeJpaRepository;
+import com.kpilszak.thegastrogeekbackend.infrastructure.persistence.repository.RecipeJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
