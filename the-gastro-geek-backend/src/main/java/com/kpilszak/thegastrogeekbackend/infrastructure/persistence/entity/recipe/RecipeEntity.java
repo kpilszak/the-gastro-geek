@@ -1,5 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.persistence.entity.recipe;
 
+import com.kpilszak.thegastrogeekbackend.infrastructure.persistence.entity.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
