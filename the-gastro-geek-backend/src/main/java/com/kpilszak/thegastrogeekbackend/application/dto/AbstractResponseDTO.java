@@ -8,9 +8,9 @@ import lombok.experimental.SuperBuilder;
 import java.time.Instant;
 
 @Data
-@SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
 public abstract class AbstractResponseDTO {
     private Long id;
     private String createdBy;
