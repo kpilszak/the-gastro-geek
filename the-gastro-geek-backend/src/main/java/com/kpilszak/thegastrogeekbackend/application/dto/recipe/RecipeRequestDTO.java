@@ -8,7 +8,6 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
-@EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class RecipeRequestDTO extends RecipeBaseRequestDTO {
     private Long id;
