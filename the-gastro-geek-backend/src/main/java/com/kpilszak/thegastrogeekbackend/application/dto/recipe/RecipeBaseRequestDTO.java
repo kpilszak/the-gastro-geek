@@ -11,7 +11,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
-@ToString
+@ToString(onlyExplicitlyIncluded = true)
 public class RecipeBaseRequestDTO {
     private String title;
     private String description;
