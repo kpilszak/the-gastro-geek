@@ -14,6 +14,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @ToString(callSuper = true, onlyExplicitlyIncluded = true)
 public class RecipeResponseDTO extends AbstractResponseDTO {
+    @ToString.Include
     private String title;
     private String description;
     private int calories;
