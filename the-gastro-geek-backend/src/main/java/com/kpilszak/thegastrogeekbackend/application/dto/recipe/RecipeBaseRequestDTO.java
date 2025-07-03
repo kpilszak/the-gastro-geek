@@ -13,6 +13,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @ToString(onlyExplicitlyIncluded = true)
 public class RecipeBaseRequestDTO {
+    @ToString.Include
     private String title;
     private String description;
     private int calories;
