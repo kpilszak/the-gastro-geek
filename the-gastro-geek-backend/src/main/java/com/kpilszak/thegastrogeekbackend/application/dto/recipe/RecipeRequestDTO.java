@@ -10,6 +10,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @ToString(callSuper = true)
 public class RecipeRequestDTO extends RecipeBaseRequestDTO {
+    @ToString.Include
     private Long id;
 }
 
