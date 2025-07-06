@@ -17,7 +17,7 @@ public abstract class AbstractResponseDTO {
     private Long id;
     private String createdBy;
     private Instant createdDate;
-    private String updatedBy;
+    private String lastModifiedBy;
     private Instant updatedDate;
     private Long version;
 }
