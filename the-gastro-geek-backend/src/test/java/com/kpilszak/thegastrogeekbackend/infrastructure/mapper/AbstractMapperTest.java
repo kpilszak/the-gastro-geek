@@ -11,7 +11,7 @@ public class AbstractMapperTest {
     protected static void assertAuditToDTO(AbstractResponseDTO dto, AbstractDomain domain) {
         assertThat(dto.getCreatedBy(), is(domain.getCreatedBy()));
         assertThat(dto.getCreatedDate(), is(domain.getCreatedDate()));
-        assertThat(dto.getLastModifiedBy(), is(domain.getLastUpdatedBy()));
+        assertThat(dto.getLastModifiedBy(), is(domain.getLastModifiedBy()));
         assertThat(dto.getUpdatedDate(), is(domain.getLastUpdatedDate()));
         assertThat(dto.getVersion(), is(domain.getVersion()));
     }
