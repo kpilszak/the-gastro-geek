@@ -18,6 +18,6 @@ public abstract class AbstractResponseDTO {
     private String createdBy;
     private Instant createdDate;
     private String lastModifiedBy;
-    private Instant updatedDate;
+    private Instant lastModifiedDate;
     private Long version;
 }
