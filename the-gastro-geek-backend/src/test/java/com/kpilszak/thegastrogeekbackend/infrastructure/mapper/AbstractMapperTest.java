@@ -12,7 +12,7 @@ public class AbstractMapperTest {
         assertThat(dto.getCreatedBy(), is(domain.getCreatedBy()));
         assertThat(dto.getCreatedDate(), is(domain.getCreatedDate()));
         assertThat(dto.getLastModifiedBy(), is(domain.getLastModifiedBy()));
-        assertThat(dto.getLastModifiedDate(), is(domain.getLastUpdatedDate()));
+        assertThat(dto.getLastModifiedDate(), is(domain.getLastModifiedDate()));
         assertThat(dto.getVersion(), is(domain.getVersion()));
     }
 

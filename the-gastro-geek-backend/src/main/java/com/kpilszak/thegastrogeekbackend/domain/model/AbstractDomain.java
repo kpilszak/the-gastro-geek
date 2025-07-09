@@ -17,7 +17,7 @@ public abstract class AbstractDomain {
     private String createdBy;
     private Instant createdDate;
     private String lastModifiedBy;
-    private Instant lastUpdatedDate;
+    private Instant lastModifiedDate;
     private Long version;
 }
 
