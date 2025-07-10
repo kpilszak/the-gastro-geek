@@ -2,6 +2,7 @@ package com.kpilszak.thegastrogeekbackend.infrastructure.mapper;
 
 import com.kpilszak.thegastrogeekbackend.application.dto.AbstractResponseDTO;
 import com.kpilszak.thegastrogeekbackend.domain.model.AbstractDomain;
+import com.kpilszak.thegastrogeekbackend.infrastructure.persistence.entity.AbstractEntity;
 import org.springframework.data.domain.Page;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -21,5 +22,13 @@ public class AbstractMapperTest {
         assertThat(dtoPage.getNumber(), is(domainPage.getNumber()));
         assertThat(dtoPage.getSize(), is(domainPage.getSize()));
         assertThat(dtoPage.getContent().size(), is(domainPage.getContent().size()));
+    }
+
+    protected static void assertAuditFromEntity(AbstractResponseDTO dto, AbstractEntity entity) {
+        assertThat(dto.getCreatedBy(), is(entity.getCreatedBy()));
+        assertThat(dto.getCreatedDate(), is(entity.getCreatedDate()));
+        assertThat(dto.getLastModifiedBy(), is(entity.getLastModifiedBy()));
+        assertThat(dto.getLastModifiedDate(), is(entity.getLastModifiedDate()));
+        assertThat(dto.getVersion(), is(entity.getVersion()));
     }
 }
