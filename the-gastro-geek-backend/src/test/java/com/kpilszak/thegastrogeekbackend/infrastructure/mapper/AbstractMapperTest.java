@@ -24,11 +24,11 @@ public class AbstractMapperTest {
         assertThat(dtoPage.getContent().size(), is(domainPage.getContent().size()));
     }
 
-    protected static void assertAuditFromEntity(AbstractResponseDTO dto, AbstractEntity entity) {
-        assertThat(dto.getCreatedBy(), is(entity.getCreatedBy()));
-        assertThat(dto.getCreatedDate(), is(entity.getCreatedDate()));
-        assertThat(dto.getLastModifiedBy(), is(entity.getLastModifiedBy()));
-        assertThat(dto.getLastModifiedDate(), is(entity.getLastModifiedDate()));
-        assertThat(dto.getVersion(), is(entity.getVersion()));
+    protected static void assertAuditFromEntity(AbstractDomain domain, AbstractEntity entity) {
+        assertThat(domain.getCreatedBy(), is(entity.getCreatedBy()));
+        assertThat(domain.getCreatedDate(), is(entity.getCreatedDate()));
+        assertThat(domain.getLastModifiedBy(), is(entity.getLastModifiedBy()));
+        assertThat(domain.getLastModifiedDate(), is(entity.getLastModifiedDate()));
+        assertThat(domain.getVersion(), is(entity.getVersion()));
     }
 }
