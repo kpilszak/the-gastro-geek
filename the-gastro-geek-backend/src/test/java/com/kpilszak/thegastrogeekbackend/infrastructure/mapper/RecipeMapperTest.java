@@ -59,6 +59,9 @@ class RecipeMapperTest extends AbstractMapperTest {
         assertRecipeFromEntity(domain, entity);
     }
 
+    @Test
+    void fromEntities_shouldMapToDomains_whenPageUsed() {}
+
     private static void assertRecipeFromDTO(Recipe domain, RecipeRequestDTO dto) {
         assertThat(domain.getId(), is(dto.getId()));
         assertThat(domain.getTitle(), is(dto.getTitle()));
