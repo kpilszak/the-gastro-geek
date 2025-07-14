@@ -17,11 +17,11 @@ public class AbstractMapperTest {
         assertThat(dto.getVersion(), is(domain.getVersion()));
     }
 
-    protected static void assertPageMetadataToDTO(Page<?> dtoPage, Page<?> domainPage) {
-        assertThat(dtoPage.getTotalElements(), is(domainPage.getTotalElements()));
-        assertThat(dtoPage.getNumber(), is(domainPage.getNumber()));
-        assertThat(dtoPage.getSize(), is(domainPage.getSize()));
-        assertThat(dtoPage.getContent().size(), is(domainPage.getContent().size()));
+    protected static void assertPageMetadata(Page<?> mapTo, Page<?> mapFrom) {
+        assertThat(mapTo.getTotalElements(), is(mapFrom.getTotalElements()));
+        assertThat(mapTo.getNumber(), is(mapFrom.getNumber()));
+        assertThat(mapTo.getSize(), is(mapFrom.getSize()));
+        assertThat(mapTo.getContent().size(), is(mapFrom.getContent().size()));
     }
 
     protected static void assertAuditFromEntity(AbstractDomain domain, AbstractEntity entity) {
