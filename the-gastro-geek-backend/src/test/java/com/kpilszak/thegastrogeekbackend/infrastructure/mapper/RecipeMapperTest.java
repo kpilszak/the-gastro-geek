@@ -47,7 +47,7 @@ class RecipeMapperTest extends AbstractMapperTest {
         var dto = mapper.toDTOs(page);
 
         assertRecipeToDTO(dto.getContent().get(0), page.getContent().get(0));
-        assertPageMetadataToDTO(dto, page);
+        assertPageMetadata(dto, page);
     }
 
     @Test
@@ -60,7 +60,16 @@ class RecipeMapperTest extends AbstractMapperTest {
     }
 
     @Test
-    void fromEntities_shouldMapToDomains_whenPageUsed() {}
+    void fromEntities_shouldMapToDomains_whenPageUsed() {
+        var list = Instancio.ofList(RECIPE_ENTITY_MODEL).size(1).create();
+        var pageable = PageRequest.of(0, 2);
+        var page = new PageImpl<>(list, pageable, list.size());
+
+        var domain = mapper.fromEntities(page);
+
+        assertRecipeFromEntity(domain.getContent().get(0), page.getContent().get(0));
+        assertPageMetadata(domain, page);
+    }
 
     private static void assertRecipeFromDTO(Recipe domain, RecipeRequestDTO dto) {
         assertThat(domain.getId(), is(dto.getId()));
