@@ -42,12 +42,12 @@ class RecipeMapperTest extends AbstractMapperTest {
     void toDTOs_shouldMapToDTOs_whenPageUsed() {
         var list = Instancio.ofList(RECIPE_MODEL).size(1).create();
         var pageable = PageRequest.of(0, 2);
-        var page = new PageImpl<>(list, pageable, list.size());
+        var domainPage = new PageImpl<>(list, pageable, list.size());
 
-        var dto = mapper.toDTOs(page);
+        var dto = mapper.toDTOs(domainPage);
 
-        assertRecipeToDTO(dto.getContent().get(0), page.getContent().get(0));
-        assertPageMetadata(dto, page);
+        assertRecipeToDTO(dto.getContent().get(0), domainPage.getContent().get(0));
+        assertPageMetadata(dto, domainPage);
     }
 
     @Test
