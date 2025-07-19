@@ -44,10 +44,10 @@ class RecipeMapperTest extends AbstractMapperTest {
         var domainPageable = PageRequest.of(0, 2);
         var domainPage = new PageImpl<>(domainList, domainPageable, domainList.size());
 
-        var dto = mapper.toDTOs(domainPage);
+        var dtoPage = mapper.toDTOs(domainPage);
 
-        assertRecipeToDTO(dto.getContent().get(0), domainPage.getContent().get(0));
-        assertPageMetadata(dto, domainPage);
+        assertRecipeToDTO(dtoPage.getContent().get(0), domainPage.getContent().get(0));
+        assertPageMetadata(dtoPage, domainPage);
     }
 
     @Test
