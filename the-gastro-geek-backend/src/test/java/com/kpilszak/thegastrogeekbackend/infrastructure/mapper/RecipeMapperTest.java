@@ -62,8 +62,8 @@ class RecipeMapperTest extends AbstractMapperTest {
     @Test
     void fromEntities_shouldMapToDomains_whenPageUsed() {
         var entityList = Instancio.ofList(RECIPE_ENTITY_MODEL).size(1).create();
-        var pageable = PageRequest.of(0, 2);
-        var page = new PageImpl<>(entityList, pageable, entityList.size());
+        var entityPageable = PageRequest.of(0, 2);
+        var page = new PageImpl<>(entityList, entityPageable, entityList.size());
 
         var domain = mapper.fromEntities(page);
 
