@@ -63,12 +63,12 @@ class RecipeMapperTest extends AbstractMapperTest {
     void fromEntities_shouldMapToDomains_whenPageUsed() {
         var entityList = Instancio.ofList(RECIPE_ENTITY_MODEL).size(1).create();
         var entityPageable = PageRequest.of(0, 2);
-        var page = new PageImpl<>(entityList, entityPageable, entityList.size());
+        var entityPage = new PageImpl<>(entityList, entityPageable, entityList.size());
 
-        var domain = mapper.fromEntities(page);
+        var domain = mapper.fromEntities(entityPage);
 
-        assertRecipeFromEntity(domain.getContent().get(0), page.getContent().get(0));
-        assertPageMetadata(domain, page);
+        assertRecipeFromEntity(domain.getContent().get(0), entityPage.getContent().get(0));
+        assertPageMetadata(domain, entityPage);
     }
 
     private static void assertRecipeFromDTO(Recipe domain, RecipeRequestDTO dto) {
