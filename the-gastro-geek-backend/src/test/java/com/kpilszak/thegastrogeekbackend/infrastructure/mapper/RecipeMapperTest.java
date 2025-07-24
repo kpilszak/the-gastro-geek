@@ -65,10 +65,10 @@ class RecipeMapperTest extends AbstractMapperTest {
         var entityPageable = PageRequest.of(0, 2);
         var entityPage = new PageImpl<>(entityList, entityPageable, entityList.size());
 
-        var domain = mapper.fromEntities(entityPage);
+        var domainPage = mapper.fromEntities(entityPage);
 
-        assertRecipeFromEntity(domain.getContent().get(0), entityPage.getContent().get(0));
-        assertPageMetadata(domain, entityPage);
+        assertRecipeFromEntity(domainPage.getContent().get(0), entityPage.getContent().get(0));
+        assertPageMetadata(domainPage, entityPage);
     }
 
     private static void assertRecipeFromDTO(Recipe domain, RecipeRequestDTO dto) {
