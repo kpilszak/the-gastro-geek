@@ -21,6 +21,8 @@ public interface RecipeMapper {
         return new PageImpl<>(dtoList, page.getPageable(), page.getTotalElements());
     }
 
+    RecipeEntity toEntity(Recipe domain);
+
     Recipe fromEntity(RecipeEntity entity);
 
     default Page<Recipe> fromEntities(Page<RecipeEntity> entityPage) {
