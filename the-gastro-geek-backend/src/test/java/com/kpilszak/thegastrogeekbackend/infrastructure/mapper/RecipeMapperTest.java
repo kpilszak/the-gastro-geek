@@ -86,6 +86,13 @@ class RecipeMapperTest extends AbstractMapperTest {
         assertAuditToDTO(dto, domain);
     }
 
+    private static void assertRecipeToEntity(RecipeEntity entity, Recipe domain) {
+        assertThat(entity.getId(), is(domain.getId()));
+        assertThat(entity.getTitle(), is(domain.getTitle()));
+        assertThat(entity.getDescription(), is(domain.getDescription()));
+        assertThat(entity.getCalories(), is(domain.getCalories()));
+    }
+
     private static void assertRecipeFromEntity(Recipe domain, RecipeEntity entity) {
         assertThat(domain.getId(), is(entity.getId()));
         assertThat(domain.getTitle(), is(entity.getTitle()));
