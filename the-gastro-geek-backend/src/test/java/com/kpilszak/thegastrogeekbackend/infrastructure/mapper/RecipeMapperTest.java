@@ -51,6 +51,15 @@ class RecipeMapperTest extends AbstractMapperTest {
     }
 
     @Test
+    void toEntity_shouldMapToEntity_whenDomainUsed() {
+        var domain = Instancio.create(RECIPE_MODEL);
+
+        var entity = mapper.toEntity(domain);
+
+        assertRecipeToEntity(entity, domain);
+    }
+
+    @Test
     void fromEntity_shouldMapToDomain_whenEntityUsed() {
         var entity = Instancio.create(RECIPE_ENTITY_MODEL);
 
