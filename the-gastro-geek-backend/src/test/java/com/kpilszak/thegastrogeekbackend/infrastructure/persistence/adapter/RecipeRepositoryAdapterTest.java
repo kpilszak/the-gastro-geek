@@ -1,5 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.persistence.adapter;
 
+import com.kpilszak.thegastrogeekbackend.infrastructure.mapper.RecipeMapper;
 import com.kpilszak.thegastrogeekbackend.infrastructure.persistence.repository.RecipeJpaRepository;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -10,4 +11,6 @@ class RecipeRepositoryAdapterTest {
     @Mock
     private RecipeJpaRepository repository;
 
+    @Mock
+    private RecipeMapper mapper;
 }
