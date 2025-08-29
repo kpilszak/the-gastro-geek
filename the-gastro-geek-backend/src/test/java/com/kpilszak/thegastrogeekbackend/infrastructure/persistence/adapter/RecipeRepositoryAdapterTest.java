@@ -2,6 +2,7 @@ package com.kpilszak.thegastrogeekbackend.infrastructure.persistence.adapter;
 
 import com.kpilszak.thegastrogeekbackend.infrastructure.mapper.RecipeMapper;
 import com.kpilszak.thegastrogeekbackend.infrastructure.persistence.repository.RecipeJpaRepository;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -17,4 +18,7 @@ class RecipeRepositoryAdapterTest {
 
     @InjectMocks
     private RecipeRepositoryAdapter adapter;
+
+    @Test
+    void findAll_returnsMappedPage_whenValidPageableGiven() {}
 }
