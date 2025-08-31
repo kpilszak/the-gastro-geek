@@ -15,7 +15,9 @@ import org.springframework.data.domain.PageRequest;
 
 import java.util.List;
 
-import static org.mockito.Mockito.when;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class RecipeRepositoryAdapterTest {
@@ -36,5 +38,13 @@ class RecipeRepositoryAdapterTest {
 
         when(repository.findAll(pageable)).thenReturn(entityPage);
         when(mapper.fromEntities(entityPage)).thenReturn(domainPage);
+
+        var result = adapter.findAll(pageable);
+
+        assertThat(result, is(domainPage));
+
+        verify(repository, times(1)).findAll(pageable);
+        verify(mapper, times(1)).fromEntities(entityPage);
+        verifyNoMoreInteractions(repository, mapper);
     }
 }
