@@ -25,4 +25,7 @@ class RecipeControllerTest {
 
     @Test
     void create_returnsCreated() {}
+
+    @Test
+    void getAll_returnsPaged() {}
 }
