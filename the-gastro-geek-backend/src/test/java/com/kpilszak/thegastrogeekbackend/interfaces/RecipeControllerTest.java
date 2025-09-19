@@ -24,7 +24,7 @@ class RecipeControllerTest {
     private ObjectMapper objectMapper;
 
     @Test
-    void create_returnsCreated() {}
+    void create_returnsCreated_whenCalled() {}
 
     @Test
     void getAll_returnsPaged() {}
