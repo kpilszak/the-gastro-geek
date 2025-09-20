@@ -27,5 +27,5 @@ class RecipeControllerTest {
     void create_returnsCreated_whenCalled() {}
 
     @Test
-    void getAll_returnsPaged() {}
+    void getAll_returnsPaged_whenCalled() {}
 }
