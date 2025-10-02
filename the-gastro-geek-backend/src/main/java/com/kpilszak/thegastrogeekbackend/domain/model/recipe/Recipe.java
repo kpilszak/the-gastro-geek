@@ -13,6 +13,8 @@ import lombok.experimental.SuperBuilder;
 public class Recipe extends AbstractDomain {
     @ToString.Include
     private String title;
+
     private String description;
+
     private int calories;
 }
