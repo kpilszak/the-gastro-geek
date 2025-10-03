@@ -14,10 +14,15 @@ import java.time.Instant;
 public abstract class AbstractDomain {
     @EqualsAndHashCode.Include
     private Long id;
+
     private String createdBy;
+
     private Instant createdDate;
+
     private String lastModifiedBy;
+
     private Instant lastModifiedDate;
+
     private Long version;
 }
 
