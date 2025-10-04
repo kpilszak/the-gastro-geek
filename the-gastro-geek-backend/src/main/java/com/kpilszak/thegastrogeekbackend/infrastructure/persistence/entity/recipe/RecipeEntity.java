@@ -17,6 +17,8 @@ import lombok.experimental.SuperBuilder;
 public class RecipeEntity extends AbstractEntity {
     @ToString.Include
     private String title;
+
     private String description;
+
     private int calories;
 }
