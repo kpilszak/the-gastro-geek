@@ -15,7 +15,9 @@ import lombok.experimental.SuperBuilder;
 public class RecipeBaseRequestDTO {
     @ToString.Include
     private String title;
+
     private String description;
+
     private int calories;
 }
 
