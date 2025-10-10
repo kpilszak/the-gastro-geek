@@ -15,9 +15,14 @@ import java.time.Instant;
 @ToString
 public abstract class AbstractResponseDTO {
     private Long id;
+
     private String createdBy;
+
     private Instant createdDate;
+
     private String lastModifiedBy;
+
     private Instant lastModifiedDate;
+
     private Long version;
 }
