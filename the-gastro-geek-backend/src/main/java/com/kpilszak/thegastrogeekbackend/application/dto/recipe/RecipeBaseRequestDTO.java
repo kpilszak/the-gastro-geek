@@ -8,12 +8,10 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 @Data
+@SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@SuperBuilder
-@ToString(onlyExplicitlyIncluded = true)
 public class RecipeBaseRequestDTO {
-    @ToString.Include
     private String title;
 
     private String description;
