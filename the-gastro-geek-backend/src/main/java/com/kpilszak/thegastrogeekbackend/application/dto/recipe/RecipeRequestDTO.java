@@ -5,12 +5,12 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 @Data
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@SuperBuilder
-@ToString(callSuper = true)
 public class RecipeRequestDTO extends RecipeBaseRequestDTO {
-    @ToString.Include
     private Long id;
 }
 
