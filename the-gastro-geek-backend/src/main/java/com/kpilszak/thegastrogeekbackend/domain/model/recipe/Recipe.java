@@ -4,12 +4,12 @@ import com.kpilszak.thegastrogeekbackend.domain.model.AbstractDomain;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@SuperBuilder
+@Data
 @ToString(callSuper = true, onlyExplicitlyIncluded = true)
 @EqualsAndHashCode(callSuper = true)
+@SuperBuilder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Recipe extends AbstractDomain {
     @ToString.Include
     private String title;
