@@ -5,12 +5,12 @@ import lombok.experimental.SuperBuilder;
 
 import java.time.Instant;
 
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-@SuperBuilder
+@Data
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@SuperBuilder
+@AllArgsConstructor
+@NoArgsConstructor
 public abstract class AbstractDomain {
     @EqualsAndHashCode.Include
     private Long id;
