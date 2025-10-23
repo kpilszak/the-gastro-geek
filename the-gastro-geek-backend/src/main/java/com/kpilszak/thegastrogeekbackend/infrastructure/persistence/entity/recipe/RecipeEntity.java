@@ -9,11 +9,11 @@ import lombok.experimental.SuperBuilder;
 @Table(name = "recipes")
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@SuperBuilder
 @ToString(callSuper = true, onlyExplicitlyIncluded = true)
 @EqualsAndHashCode(callSuper = true)
+@SuperBuilder
+@AllArgsConstructor
+@NoArgsConstructor
 public class RecipeEntity extends AbstractEntity {
     @ToString.Include
     private String title;
