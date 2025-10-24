@@ -14,11 +14,11 @@ import java.time.Instant;
 @MappedSuperclass
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@SuperBuilder
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@SuperBuilder
+@AllArgsConstructor
+@NoArgsConstructor
 public abstract class AbstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
