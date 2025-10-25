@@ -6,10 +6,11 @@ import com.kpilszak.thegastrogeekbackend.application.dto.recipe.RecipeResponseDT
 import com.kpilszak.thegastrogeekbackend.infrastructure.mapper.RecipeMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/recipes")
@@ -21,9 +22,4 @@ public class RecipeController {
 
     @PostMapping
     public RecipeResponseDTO create(@Valid @RequestBody RecipeRequestDTO requestDTO) { return null; }
-
-    @GetMapping
-    public Page<RecipeResponseDTO> getAll(Pageable pageable) {
-        return mapper.toDTOs(management.getAll(pageable));
-    }
 }
