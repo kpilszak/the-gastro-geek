@@ -21,14 +21,14 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class RecipeRepositoryAdapterTest {
+    @InjectMocks
+    private RecipeRepositoryAdapter adapter;
+
     @Mock
     private RecipeJpaRepository repository;
 
     @Mock
     private RecipeMapper mapper;
-
-    @InjectMocks
-    private RecipeRepositoryAdapter adapter;
 
     @Test
     void findAll_returnsPage_whenValid() {
