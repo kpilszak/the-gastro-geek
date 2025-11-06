@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class RecipeService {
-    private final RecipeRepository recipeRepository;
+    private final RecipeRepository repository;
 
     public Page<Recipe> getAll(Pageable pageable) {
-        return recipeRepository.findAll(pageable);
+        return repository.findAll(pageable);
     }
 }
