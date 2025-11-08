@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class RecipeService {
     private final RecipeRepository repository;
 
-    public Page<Recipe> getAll(Pageable pageable) {
-        return repository.findAll(pageable);
+    public Page<Recipe> getPagedWithQuery(String query, Pageable pageable) {
+        return repository.findAllWithQuery(query, pageable);
     }
 }
