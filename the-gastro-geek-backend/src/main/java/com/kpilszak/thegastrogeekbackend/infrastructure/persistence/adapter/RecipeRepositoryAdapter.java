@@ -18,6 +18,6 @@ public class RecipeRepositoryAdapter implements RecipeRepository {
 
     @Override
     public RecipeQueryResponse findAllWithQuery(String query, Pageable pageable) {
-        return mapper.fromEntities(repository.findAll(pageable));
+        return new RecipeQueryResponse(repository.findAll(pageable));
     }
 }
