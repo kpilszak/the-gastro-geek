@@ -1,6 +1,7 @@
 package com.kpilszak.thegastrogeekbackend.domain.service;
 
 import com.kpilszak.thegastrogeekbackend.domain.model.recipe.Recipe;
+import com.kpilszak.thegastrogeekbackend.domain.model.recipe.RecipeQueryResponse;
 import com.kpilszak.thegastrogeekbackend.domain.repository.RecipeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class RecipeService {
     private final RecipeRepository repository;
 
-    public Page<Recipe> getPagedWithQuery(String query, Pageable pageable) {
+    public RecipeQueryResponse getPagedWithQuery(String query, Pageable pageable) {
         return repository.findAllWithQuery(query, pageable);
     }
 }
