@@ -39,7 +39,7 @@ class RecipeRepositoryAdapterTest {
         when(repository.findAll(pageable)).thenReturn(entityPage);
         when(mapper.fromEntities(entityPage)).thenReturn(domainPage);
 
-        var result = adapter.findAll(pageable);
+        var result = adapter.findAllWithQuery(pageable);
 
         assertThat(result, is(domainPage));
 
