@@ -1,6 +1,7 @@
 package com.kpilszak.thegastrogeekbackend.domain.service;
 
 import com.kpilszak.thegastrogeekbackend.domain.repository.RecipeRepository;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -13,4 +14,7 @@ class RecipeServiceTest {
 
     @Mock
     private RecipeRepository repository;
+
+    @Test
+    void getPagedWithQuery_returnsQueryResponse_whenValid() {}
 }
