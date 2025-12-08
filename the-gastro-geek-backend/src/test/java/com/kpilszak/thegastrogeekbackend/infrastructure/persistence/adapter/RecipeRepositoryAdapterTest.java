@@ -31,7 +31,7 @@ class RecipeRepositoryAdapterTest {
     private RecipeMapper mapper;
 
     @Test
-    void findAllWithQuery_returnsQueryResponse_whenValid() {
+    void findAllWithQuery_returnsQueryResponse_whenExist() {
         var pageable = PageRequest.of(0, 10);
         Page<RecipeEntity> entityPage = new PageImpl<>(List.of(new RecipeEntity()));
         Page<Recipe> domainPage = new PageImpl<>(List.of(new Recipe()));
