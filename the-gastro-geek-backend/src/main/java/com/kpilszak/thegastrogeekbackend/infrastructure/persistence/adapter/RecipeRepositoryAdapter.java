@@ -1,5 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.persistence.adapter;
 
+import com.kpilszak.thegastrogeekbackend.domain.model.PagingRequest;
 import com.kpilszak.thegastrogeekbackend.domain.model.recipe.RecipeQueryResponse;
 import com.kpilszak.thegastrogeekbackend.domain.repository.RecipeRepository;
 import com.kpilszak.thegastrogeekbackend.infrastructure.mapper.RecipeMapper;
@@ -15,7 +16,7 @@ public class RecipeRepositoryAdapter implements RecipeRepository {
     private final RecipeMapper mapper;
 
     @Override
-    public RecipeQueryResponse findAllWithQuery(String query, Pageable pageable) {
-        return new RecipeQueryResponse(repository.findAll(pageable));
+    public RecipeQueryResponse findAllWithQuery(String query, PagingRequest pagingRequest) {
+        return new RecipeQueryResponse(repository.findAll(pagingRequest));
     }
 }
