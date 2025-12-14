@@ -6,7 +6,6 @@ import com.kpilszak.thegastrogeekbackend.domain.repository.RecipeRepository;
 import com.kpilszak.thegastrogeekbackend.infrastructure.mapper.RecipeMapper;
 import com.kpilszak.thegastrogeekbackend.infrastructure.persistence.repository.RecipeJpaRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 @Component
