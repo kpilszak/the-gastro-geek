@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class RecipeRepositoryAdapter implements RecipeRepository {
+public class RecipeRepositoryAdapter extends AbstractRepositoryAdapter implements RecipeRepository {
     private final RecipeJpaRepository repository;
     private final RecipeMapper mapper;
 
