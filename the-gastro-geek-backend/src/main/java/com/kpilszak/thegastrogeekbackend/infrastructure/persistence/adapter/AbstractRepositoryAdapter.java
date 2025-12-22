@@ -10,4 +10,8 @@ public abstract class AbstractRepositoryAdapter<D, E, EI> {
     ) {
         this.repository = repository;
     }
+
+    public D save(D domain) {
+        return repository.save(domain);
+    }
 }
