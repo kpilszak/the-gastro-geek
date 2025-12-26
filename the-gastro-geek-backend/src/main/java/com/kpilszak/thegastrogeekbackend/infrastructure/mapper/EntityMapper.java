@@ -1,4 +1,4 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.mapper;
 
-public interface EntityMapper {
+public interface EntityMapper<D, E> {
 }
