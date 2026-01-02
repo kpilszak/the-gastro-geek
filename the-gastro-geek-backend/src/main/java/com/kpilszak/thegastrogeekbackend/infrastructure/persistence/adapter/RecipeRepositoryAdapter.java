@@ -9,10 +9,15 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
 public class RecipeRepositoryAdapter extends AbstractRepositoryAdapter implements RecipeRepository {
     private final RecipeJpaRepository repository;
     private final RecipeMapper mapper;
+
+    public RecipeRepositoryAdapter(RecipeJpaRepository repository, RecipeMapper mapper) {
+        super(repository);
+        this.repository = repository;
+        this.mapper = mapper;
+    }
 
     @Override
     public RecipeQueryResponse findAllWithQuery(String query, PagingRequest pagingRequest) {
