@@ -6,8 +6,7 @@ public abstract class AbstractRepositoryAdapter<D, E, EI> {
     protected final BaseJpaRepository<E, EI> repository;
 
     protected AbstractRepositoryAdapter(
-            BaseJpaRepository<E, EI> repository
-    ) {
+            BaseJpaRepository<E, EI> repository) {
         this.repository = repository;
     }
 
