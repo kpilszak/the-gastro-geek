@@ -1,4 +1,4 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.persistence;
 
-public interface BaseRepository<D, DI> {
+public interface BaseRepository<D, DI> extends BaseValidationRepository<DI> {
 }
