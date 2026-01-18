@@ -11,7 +11,7 @@ import java.time.Instant;
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-public abstract class AbstractDomain {
+public abstract class AbstractModel {
     @EqualsAndHashCode.Include
     private Long id;
 

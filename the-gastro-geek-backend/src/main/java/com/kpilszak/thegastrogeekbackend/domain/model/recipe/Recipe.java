@@ -1,6 +1,6 @@
 package com.kpilszak.thegastrogeekbackend.domain.model.recipe;
 
-import com.kpilszak.thegastrogeekbackend.domain.model.AbstractDomain;
+import com.kpilszak.thegastrogeekbackend.domain.model.AbstractModel;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -10,7 +10,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Recipe extends AbstractDomain {
+public class Recipe extends AbstractModel {
     @ToString.Include
     private String title;
 

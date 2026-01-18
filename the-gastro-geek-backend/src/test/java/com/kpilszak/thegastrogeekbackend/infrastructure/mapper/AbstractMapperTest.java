@@ -1,7 +1,7 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.mapper;
 
 import com.kpilszak.thegastrogeekbackend.application.dto.AbstractResponseDTO;
-import com.kpilszak.thegastrogeekbackend.domain.model.AbstractDomain;
+import com.kpilszak.thegastrogeekbackend.domain.model.AbstractModel;
 import com.kpilszak.thegastrogeekbackend.infrastructure.persistence.entity.AbstractEntity;
 import org.springframework.data.domain.Page;
 
@@ -9,7 +9,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 public class AbstractMapperTest {
-    protected static void assertAuditToDTO(AbstractResponseDTO dto, AbstractDomain domain) {
+    protected static void assertAuditToDTO(AbstractResponseDTO dto, AbstractModel domain) {
         assertThat(dto.getCreatedBy(), is(domain.getCreatedBy()));
         assertThat(dto.getCreatedDate(), is(domain.getCreatedDate()));
         assertThat(dto.getLastModifiedBy(), is(domain.getLastModifiedBy()));
@@ -24,7 +24,7 @@ public class AbstractMapperTest {
         assertThat(mapTo.getContent().size(), is(mapFrom.getContent().size()));
     }
 
-    protected static void assertAuditFromEntity(AbstractDomain domain, AbstractEntity entity) {
+    protected static void assertAuditFromEntity(AbstractModel domain, AbstractEntity entity) {
         assertThat(domain.getCreatedBy(), is(entity.getCreatedBy()));
         assertThat(domain.getCreatedDate(), is(entity.getCreatedDate()));
         assertThat(domain.getLastModifiedBy(), is(entity.getLastModifiedBy()));
