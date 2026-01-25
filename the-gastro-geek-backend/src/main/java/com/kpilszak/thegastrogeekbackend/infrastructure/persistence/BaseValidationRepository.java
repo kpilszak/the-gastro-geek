@@ -1,5 +1,5 @@
 package com.kpilszak.thegastrogeekbackend.infrastructure.persistence;
 
-public interface BaseValidationRepository<DI> {
-    boolean exists(DI id);
+public interface BaseValidationRepository<MI> {
+    boolean exists(MI id);
 }
